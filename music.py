@@ -1,4 +1,4 @@
-from playsound import playsound
+import webbrowser
 import os
 from termcolor import colored
 def execute(displaysplit,rep,adresse,arg:list):
@@ -17,7 +17,7 @@ def execute(displaysplit,rep,adresse,arg:list):
             musicplay=rep[11::]
             if musicplay in fichiers:
                 musicd=adresse+"/music/"+musicplay
-                playsound(musicd,block=False)
+                webbrowser.open(musicd)
             else:
                 print(colored("Ce fichier n'existe pas","yellow",attrs=["bold"]))
         else:
